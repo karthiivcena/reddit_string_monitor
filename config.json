@@ -1,0 +1,17 @@
+{
+  "application": {"name": "Reddit Free Alert Bridge", "enabled": true, "log_level": "INFO"},
+  "paths": {"log_file": "logs/bridge.log"},
+  "email_reader": {
+    "poll_interval_seconds": 60,
+    "sender_contains": "f5bot.com",
+    "max_emails_per_cycle": 50
+  },
+  "filters": {
+    "include_text": [],
+    "exclude_text": [],
+    "match_mode": "any",
+    "case_sensitive": false
+  },
+  "telegram": {"enabled": true, "message_prefix": "🔔 Reddit Keyword Alert"},
+  "database": {"path": "data/forwarded_alerts.db", "deduplicate": true}
+}
